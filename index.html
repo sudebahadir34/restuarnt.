@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="urunleriGetir()">
+<body>
+    <form action="#" id="restaurant">
+        <h3 class="formBaslik">RESTAURANT</h3>
+        <label for="kategori" class="aciklama">Ürün kategorileri:</label>
+        <br>
+        <label for="kategoriCorba">çorba çeşitleri</label>
+        <input type="radio" name="kategori" id="kategoriCorba" checked>
+        <br>
+        <label for="kategoriAna">ana yemekler</label>
+        <input type="radio" name="kategori" id="kategoriAna">
+        <br>
+        <label for="kategoriTatlı">Tatlı çeşitleri</label>
+        <input type="radio" name="kategori" id="kategoriTatlı">
+
+        <div id="restaurantPanel">
+            
+        </div>
+
+        <label for="adet" class="aciklama">Adet seçimi yapınız:</label>
+        <input type="number" name="yemek" id="yemekAdet" value="1" min="1">
+        <input type="button" value="Sepete Ekle" id="btnEkle" onclick="sepeteEkle()">
+
+        <select name="restaurant" id="restaurant" size="10">
+            <option value="0">Seçtiğiniz ürünler</option>
+        </select>
+
+        <input type="button" value="Sepetten Çıkar" id="btnCikar" onclick="sepettenCikar()">
+        <input type="button" value="Sepeti Boşalt" id="btnBosalt" onclick="sepetiBosalt()">
+
+        <label for="sepetTutar" class="aciklama">Toplam ödenecek tutar:</label>
+        <h4 id="sepetTutar">0 TL</h4>
+        <input type="button" value="Tamamla ve Öde" id="btnTamamla">
+
+        <h5 id="sonuc"></h5>
+
+ </form>
+<script src="script.js"></script>
+
+</body>
+</html>
